@@ -45,6 +45,7 @@ app.post("/logout", function (req, res) {
     res.redirect("/main")
 })
 app.post("/regForm", function (req, res) {
+    bool = true;
     for (let i = 0; i < tab.length; i++) {
         if (req.body.login == tab[i].login) {
             bool = false;
