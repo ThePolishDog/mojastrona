@@ -13,7 +13,7 @@ var logged = 0;
 var tab = [
     { id: 0, login: "aniela", password: "421", student: undefined, age: 15, sex: "w" },
     { id: 1, login: "anndy", password: "4951", student: "on", age: 54, sex: "m" },
-    { id: 2, login: "tabaluga", password: "tabaluga", student: undefined, age: 16, sex: "m" }
+    { id: 2, login: "123", password: "123", student: undefined, age: 16, sex: "m" }
 ]
 app.use(express.static('static'))
 app.listen(PORT, function () {
@@ -82,7 +82,7 @@ app.post("/logForm", function (req, res) {
         res.sendFile(path.join(__dirname + "/static/notLogged.html"))
     }
 })
-app.post("/show", function (req, res) {
+app.all("/show", function (req, res) {
     if (logged == 1) {
         var page = '<body style="background-color: black;"> </body><div style="display: flex;flex-direction: row;"><form action="/sort" method="POST"><a style="font-size: 26px; color: yellow;" href="#" onclick="this.parentNode.submit()">Sort</a></form>'
         page += '<form action="/gender" method="POST"><a style="font-size: 26px; color: yellow; padding-left: 10px; padding-right: 10px" href="#" onclick="this.parentNode.submit()">Gender</a></form>'
@@ -112,7 +112,7 @@ app.post("/show", function (req, res) {
         res.sendFile(path.join(__dirname + "/static/adminFalse.html"))
     }
 })
-app.post("/gender", function (req, res) {
+app.all("/gender", function (req, res) {
     if (logged == 1) {
         var page = '<body style="background-color: black;"> </body><div style="display: flex;flex-direction: row;"><form action="/sort" method="POST"><a style="font-size: 26px; color: yellow;" href="#" onclick="this.parentNode.submit()">Sort</a></form>'
         page += '<form action="/gender" method="POST"><a style="font-size: 26px; color: yellow;padding-left: 10px; padding-right: 10px" href="#" onclick="this.parentNode.submit()">Gender</a></form>'
@@ -139,7 +139,7 @@ app.post("/gender", function (req, res) {
     }
 })
 var helpme = 0;
-app.post("/sort", function (req, res) {
+app.all("/sort", function (req, res) {
     if (logged == 1) {
         var page = '<body style="background-color: black;"> </body><div style="display: flex;flex-direction: row; margin:10px"><form action="/sort" method="POST"><a style="font-size: 26px; color: yellow;"href="#" onclick="this.parentNode.submit()">Sort</a></form>'
         page += '<form action="/gender" method="POST"><a style="padding-left: 10px; padding-right: 10px; font-size: 26px; color: yellow;" href="#" onclick="this.parentNode.submit()">Gender</a></form>'
