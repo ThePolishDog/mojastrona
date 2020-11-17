@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    height: 100vh;
+}
+.main{
+    height: 80px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+}
+.main .box{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.main a{
+    color: white;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+}
+.main a:hover,
+.main a:active{
+    color: pink;
+}
+h1{
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    height: -webkit-calc(100% - 80px);
+    height: -moz-calc(100% - 80px);
+    height: calc(100% - 80px);
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: lightpink;
+    font-size: 120px;
+    text-align: center;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <nav class="main">
+        <div class="box">
+            <a href="main">Main</a>
+        </div>
+        <div class="box">
+            <a href="register">Register</a>
+        </div>
+        <div class="box">
+            <a href="login">Login</a>
+        </div>
+        <div class="box">
+            <a href="admin">Admin</a>
+        </div>
+    </nav>
+    <nav class="second">
+        <div class="box">
+            <form action="/sort" method="POST">
+                <a href="#" onclick="this.parentNode.submit()">Sort</a>
+            </form>
+        </div>
+        <div class="box">
+            <form action="/gender" method="POST">
+                <a href="#" onclick="this.parentNode.submit()">Gender</a>
+            </form>
+        </div>
+        <div class="box">
+            <form action="/show" method="POST">
+                <a href="#" onclick="this.parentNode.submit()">Show</a>
+            </form>
+        </div>
+        <div class="box">
+            <form action="/logout" method="POST">
+                <a href="#" onclick="this.parentNode.submit()">Log Out</a>
+            </form>
+        </div>
+    </nav>
+    <h1>
+        ADMIN PAGE
+    </h1>
+</body>
+
+</html>

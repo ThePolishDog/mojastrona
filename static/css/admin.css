@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    height: 100vh;
+}
+.main{
+    height: 80px;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+}
+.box{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+a{
+    color: white;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+}
+.main a:hover,
+.main a:active{
+    color: pink;
+}
+.second{
+    height: 80px;
+    background-color: darkblue;
+    display: flex;
+    flex-direction: row;
+}
+.second a:hover,
+.second a:active{
+    color: pink;
+}
+h1{
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    height: -webkit-calc(100% - 160px);
+    height: -moz-calc(100% - 160px);
+    height: calc(100% - 160px);
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: lightpink;
+    font-size: 140px;
+    text-align: center;
+}
